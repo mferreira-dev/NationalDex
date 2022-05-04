@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1804B2FFD8D74ABBA71D188D /* Pods_NationalDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EC0DE203ADDF044C73A03A /* Pods_NationalDex.framework */; };
 		5B430AD62822F28E00AD0D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AD52822F28E00AD0D05 /* AppDelegate.swift */; };
 		5B430AD82822F28E00AD0D05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AD72822F28E00AD0D05 /* SceneDelegate.swift */; };
 		5B430ADA2822F28E00AD0D05 /* DexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AD92822F28E00AD0D05 /* DexViewController.swift */; };
@@ -16,9 +17,17 @@
 		5B430AFA2822F75B00AD0D05 /* DexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AF92822F75B00AD0D05 /* DexViewModel.swift */; };
 		5B430B002822FBA000AD0D05 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AFF2822FBA000AD0D05 /* BaseViewController.swift */; };
 		5B430B082823050700AD0D05 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B072823050600AD0D05 /* BaseProtocol.swift */; };
+		5B430B0B28230D7600AD0D05 /* PokemonIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B0A28230D7600AD0D05 /* PokemonIndex.swift */; };
+		5B430B0D28230E6F00AD0D05 /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B0C28230E6F00AD0D05 /* PokemonRepository.swift */; };
+		5B430B0F28230F3D00AD0D05 /* PokemonRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B0E28230F3D00AD0D05 /* PokemonRepositoryImpl.swift */; };
+		5B430B1128230F8D00AD0D05 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B1028230F8D00AD0D05 /* NetworkClient.swift */; };
+		5B430B13282310AE00AD0D05 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B12282310AE00AD0D05 /* Endpoints.swift */; };
+		5B430B152823123D00AD0D05 /* PokemonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B142823123D00AD0D05 /* PokemonUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03EC0DE203ADDF044C73A03A /* Pods_NationalDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NationalDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C47DA480228186E32F825CF /* Pods-NationalDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDex.debug.xcconfig"; path = "Target Support Files/Pods-NationalDex/Pods-NationalDex.debug.xcconfig"; sourceTree = "<group>"; };
 		5B430AD22822F28E00AD0D05 /* NationalDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NationalDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B430AD52822F28E00AD0D05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B430AD72822F28E00AD0D05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +39,13 @@
 		5B430AF92822F75B00AD0D05 /* DexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexViewModel.swift; sourceTree = "<group>"; };
 		5B430AFF2822FBA000AD0D05 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5B430B072823050600AD0D05 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
+		5B430B0A28230D7600AD0D05 /* PokemonIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonIndex.swift; sourceTree = "<group>"; };
+		5B430B0C28230E6F00AD0D05 /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
+		5B430B0E28230F3D00AD0D05 /* PokemonRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepositoryImpl.swift; sourceTree = "<group>"; };
+		5B430B1028230F8D00AD0D05 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		5B430B12282310AE00AD0D05 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		5B430B142823123D00AD0D05 /* PokemonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonUseCase.swift; sourceTree = "<group>"; };
+		BF1865F34F907A70F141EC65 /* Pods-NationalDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDex.release.xcconfig"; path = "Target Support Files/Pods-NationalDex/Pods-NationalDex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1804B2FFD8D74ABBA71D188D /* Pods_NationalDex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10A9EBB262C629378C575551 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03EC0DE203ADDF044C73A03A /* Pods_NationalDex.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24BC9BF4E913EF026D4944B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C47DA480228186E32F825CF /* Pods-NationalDex.debug.xcconfig */,
+				BF1865F34F907A70F141EC65 /* Pods-NationalDex.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5B430AC92822F28E00AD0D05 = {
 			isa = PBXGroup;
 			children = (
 				5B430AD42822F28E00AD0D05 /* NationalDex */,
 				5B430AD32822F28E00AD0D05 /* Products */,
+				24BC9BF4E913EF026D4944B6 /* Pods */,
+				10A9EBB262C629378C575551 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +132,8 @@
 		5B430AEC2822F51300AD0D05 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5B430B12282310AE00AD0D05 /* Endpoints.swift */,
+				5B430B1028230F8D00AD0D05 /* NetworkClient.swift */,
 				5B430AF42822F5A700AD0D05 /* Repositories */,
 			);
 			path = Data;
@@ -122,6 +160,7 @@
 		5B430AF12822F58800AD0D05 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				5B430B142823123D00AD0D05 /* PokemonUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -129,6 +168,7 @@
 		5B430AF22822F58E00AD0D05 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				5B430B0C28230E6F00AD0D05 /* PokemonRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -136,6 +176,7 @@
 		5B430AF32822F59700AD0D05 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				5B430B0A28230D7600AD0D05 /* PokemonIndex.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -143,6 +184,7 @@
 		5B430AF42822F5A700AD0D05 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				5B430B0E28230F3D00AD0D05 /* PokemonRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -163,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B430AE62822F29100AD0D05 /* Build configuration list for PBXNativeTarget "NationalDex" */;
 			buildPhases = (
+				E932BC43C743EDDDCF7A8CE5 /* [CP] Check Pods Manifest.lock */,
 				5B430ACE2822F28E00AD0D05 /* Sources */,
 				5B430ACF2822F28E00AD0D05 /* Frameworks */,
 				5B430AD02822F28E00AD0D05 /* Resources */,
+				429B9D2F61823D251FD12720 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +264,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		429B9D2F61823D251FD12720 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NationalDex/Pods-NationalDex-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NationalDex/Pods-NationalDex-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NationalDex/Pods-NationalDex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E932BC43C743EDDDCF7A8CE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NationalDex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B430ACE2822F28E00AD0D05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -227,12 +313,18 @@
 			files = (
 				5B430AF62822F6E900AD0D05 /* Observable.swift in Sources */,
 				5B430AFA2822F75B00AD0D05 /* DexViewModel.swift in Sources */,
+				5B430B13282310AE00AD0D05 /* Endpoints.swift in Sources */,
 				5B430AF82822F71300AD0D05 /* K.swift in Sources */,
 				5B430ADA2822F28E00AD0D05 /* DexViewController.swift in Sources */,
 				5B430AD62822F28E00AD0D05 /* AppDelegate.swift in Sources */,
+				5B430B0B28230D7600AD0D05 /* PokemonIndex.swift in Sources */,
+				5B430B152823123D00AD0D05 /* PokemonUseCase.swift in Sources */,
+				5B430B0D28230E6F00AD0D05 /* PokemonRepository.swift in Sources */,
 				5B430B002822FBA000AD0D05 /* BaseViewController.swift in Sources */,
 				5B430B082823050700AD0D05 /* BaseProtocol.swift in Sources */,
 				5B430AD82822F28E00AD0D05 /* SceneDelegate.swift in Sources */,
+				5B430B0F28230F3D00AD0D05 /* PokemonRepositoryImpl.swift in Sources */,
+				5B430B1128230F8D00AD0D05 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +447,7 @@
 		};
 		5B430AE72822F29100AD0D05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C47DA480228186E32F825CF /* Pods-NationalDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +475,7 @@
 		};
 		5B430AE82822F29100AD0D05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF1865F34F907A70F141EC65 /* Pods-NationalDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

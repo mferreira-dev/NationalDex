@@ -9,12 +9,10 @@ import Foundation
 
 struct K {
 	
-	static let greet = "Hello, world!"
+	static let pokemonPerPage = 100
 	
 	struct Cells {
-		
 		static let pokemonCell = "pokemonCell"
-		
 	}
 
 }
