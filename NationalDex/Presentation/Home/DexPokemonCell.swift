@@ -12,7 +12,8 @@ class DexPokemonCell: UITableViewCell {
 	
 	let cellView: UIView = {
 		let view = UIView()
-		view.layer.cornerRadius = 10
+		view.layer.cornerRadius = 20
+		view.backgroundColor = .lightGray
 		return view
 	}()
 	
@@ -47,7 +48,8 @@ class DexPokemonCell: UITableViewCell {
 			top: self.topAnchor,
 			bottom: self.bottomAnchor,
 			leading: self.leadingAnchor,
-			trailling: self.trailingAnchor
+			trailling: self.trailingAnchor,
+			padding: .init(top: 0, left: 10, bottom: 10, right: 10)
 		)
 		
 		iconImageView.anchor(
@@ -59,8 +61,8 @@ class DexPokemonCell: UITableViewCell {
 		)
 		
 		nameLabel.anchor(
-			top: iconImageView.topAnchor,
-			bottom: iconImageView.bottomAnchor,
+			top: cellView.topAnchor,
+			bottom: cellView.bottomAnchor,
 			leading: iconImageView.trailingAnchor,
 			trailling: cellView.trailingAnchor
 		)

@@ -83,14 +83,18 @@ struct PokemonDetails: Decodable {
 		let other: Other
 		
 		struct Other: Decodable {
-			let home: Home
+			let officialArtwork: OfficialArtwork
 			
-			struct Home: Decodable {
+			struct OfficialArtwork: Decodable {
 				let frontDefault: String
 				
 				enum CodingKeys: String, CodingKey {
 					case frontDefault = "front_default"
 				}
+			}
+			
+			enum CodingKeys: String, CodingKey {
+				case officialArtwork = "official-artwork"
 			}
 		}
 		

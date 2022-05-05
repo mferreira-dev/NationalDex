@@ -15,6 +15,7 @@ class DexViewController: UIViewController, BaseProtocol {
 	private let pokemonTableView: UITableView = {
 		let table = UITableView()
 //		table.tableHeaderView = UIView()
+		table.separatorStyle = .none
 		table.register(DexPokemonCell.self, forCellReuseIdentifier: K.Cells.pokemonCell)
 		return table
 	}()
@@ -75,7 +76,7 @@ extension DexViewController: UITableViewDelegate, UITableViewDataSource {
 		let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.pokemonCell, for: indexPath) as! DexPokemonCell
 		
 		let name = viewModel.pokemonList[indexPath.row].name.capitalized
-		let imageUrl = viewModel.pokemonList[indexPath.row].sprites.other.home.frontDefault
+		let imageUrl = viewModel.pokemonList[indexPath.row].sprites.other.officialArtwork.frontDefault
 		
 		cell.nameLabel.text = name
 		cell.iconImageView.kf.setImage(with: URL(string: imageUrl))
