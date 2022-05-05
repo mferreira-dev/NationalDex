@@ -13,4 +13,8 @@ struct Endpoints {
 		return "https://pokeapi.co/api/v2/pokemon?limit=\(limit)&offset=\(offset)"
 	}
 	
+	static func getPokemonDetailsByNameUrl(name: String) -> String {
+		return "https://pokeapi.co/api/v2/pokemon/\(name)"
+	}
+	
 }

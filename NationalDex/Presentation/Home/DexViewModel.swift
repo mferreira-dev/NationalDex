@@ -11,16 +11,13 @@ final class DexViewModel {
 	
 	let pokemonUseCase = PokemonUseCase(PokemonRepositoryImpl.instance)
 	
-	var pokemonIndexObservable: Observable<[PokemonIndex.Result]> = Observable(nil)
-	var pokemonIndex = [PokemonIndex.Result]()
+	var pokemonListObservable: Observable<[PokemonDetails]> = Observable(nil)
+	var pokemonList = [PokemonDetails]()
 	
+	var pokemonIndex = [PokemonIndex.Result]()
 	var isPaginating = false
 	private var offset = 0
 	private var count = 0
-	
-	init() {
-		fetchPokemonIndex()
-	}
 	
 	func fetchPokemonIndex() {
 		if offset > count {
@@ -31,7 +28,7 @@ final class DexViewModel {
 		
 		pokemonUseCase.fetchPokemonIndex(pokemonPerPage: K.pokemonPerPage, offset: offset) { response, error in
 			if let safeError = error {
-				print(safeError.errorDescription!)
+				print(safeError)
 				return
 			}
 			
@@ -45,9 +42,32 @@ final class DexViewModel {
 				self.pokemonIndex.append($0)
 			}
 			
-			self.pokemonIndexObservable.value = self.pokemonIndex
+			// TODO: Implement Async network calls.
+			self.getPokemonDetails()
+			self.pokemonIndex.removeAll()
+			
 			self.offset += K.pokemonPerPage
 			self.isPaginating = false
+		}
+	}
+	
+	func getPokemonDetails() {
+		pokemonIndex.forEach { it in
+			fetchPokemonDetailsByName(name: it.name)
+		}
+	}
+	
+	func fetchPokemonDetailsByName(name: String) {
+		pokemonUseCase.fetchPokemonDetailsByName(name: name) { response, error in
+			if let safeError = error {
+				print(safeError)
+				return
+			}
+			
+			guard let safeResponse = response else { return }
+			self.pokemonList.append(safeResponse)
+			
+			self.pokemonListObservable.value = self.pokemonList
 		}
 	}
 	

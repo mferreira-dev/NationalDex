@@ -23,6 +23,7 @@
 		5B430B1128230F8D00AD0D05 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B1028230F8D00AD0D05 /* NetworkClient.swift */; };
 		5B430B13282310AE00AD0D05 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B12282310AE00AD0D05 /* Endpoints.swift */; };
 		5B430B152823123D00AD0D05 /* PokemonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B142823123D00AD0D05 /* PokemonUseCase.swift */; };
+		5B62A81E2823513500DB9E7B /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62A81D2823513500DB9E7B /* PokemonDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		5B430B1028230F8D00AD0D05 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		5B430B12282310AE00AD0D05 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		5B430B142823123D00AD0D05 /* PokemonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonUseCase.swift; sourceTree = "<group>"; };
+		5B62A81D2823513500DB9E7B /* PokemonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
 		BF1865F34F907A70F141EC65 /* Pods-NationalDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDex.release.xcconfig"; path = "Target Support Files/Pods-NationalDex/Pods-NationalDex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				5B430B0A28230D7600AD0D05 /* PokemonIndex.swift */,
+				5B62A81D2823513500DB9E7B /* PokemonDetails.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				5B430AD82822F28E00AD0D05 /* SceneDelegate.swift in Sources */,
 				5B430B0F28230F3D00AD0D05 /* PokemonRepositoryImpl.swift in Sources */,
 				5B430B1128230F8D00AD0D05 /* NetworkClient.swift in Sources */,
+				5B62A81E2823513500DB9E7B /* PokemonDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

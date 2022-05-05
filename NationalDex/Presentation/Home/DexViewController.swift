@@ -46,7 +46,7 @@ class DexViewController: UIViewController, BaseProtocol {
 	}
 	
 	func setupObservers() {
-		viewModel.pokemonIndexObservable.bind { it in
+		viewModel.pokemonListObservable.bind { it in
 			self.pokemonTableView.reloadData()
 		}
 	}
@@ -71,7 +71,7 @@ extension DexViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.pokemonCell, for: indexPath)
-		cell.textLabel?.text = viewModel.pokemonIndex[indexPath.row].name.capitalized
+		cell.textLabel?.text = viewModel.pokemonList[indexPath.row].name.capitalized
 		return cell
 	}
 	
