@@ -71,7 +71,7 @@ extension DexViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.pokemonCell, for: indexPath)
-		cell.textLabel?.text = viewModel.pokemonIndex[indexPath.row].name?.capitalized
+		cell.textLabel?.text = viewModel.pokemonIndex[indexPath.row].name.capitalized
 		return cell
 	}
 	

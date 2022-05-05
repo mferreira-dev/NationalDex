@@ -9,19 +9,24 @@ import Foundation
 
 final class DexViewModel {
 	
-	var isPaginating = false
-	
 	let pokemonUseCase = PokemonUseCase(PokemonRepositoryImpl.instance)
 	
 	var pokemonIndexObservable: Observable<[PokemonIndex.Result]> = Observable(nil)
 	var pokemonIndex = [PokemonIndex.Result]()
-	var offset = 0
+	
+	var isPaginating = false
+	private var offset = 0
+	private var count = 0
 	
 	init() {
 		fetchPokemonIndex()
 	}
 	
 	func fetchPokemonIndex() {
+		if offset > count {
+			return
+		}
+		
 		isPaginating = true
 		
 		pokemonUseCase.fetchPokemonIndex(pokemonPerPage: K.pokemonPerPage, offset: offset) { response, error in
@@ -30,7 +35,13 @@ final class DexViewModel {
 				return
 			}
 			
-			response?.results?.forEach {
+			guard let safeResponse = response else { return }
+			
+			if self.count == 0 {
+				self.count = safeResponse.count
+			}
+			
+			safeResponse.results.forEach {
 				self.pokemonIndex.append($0)
 			}
 			

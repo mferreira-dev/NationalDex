@@ -10,13 +10,11 @@ import Foundation
 struct PokemonIndex: Decodable {
 	
 	let count: Int
-	let next: String?
-	let previous: String?
-	let results: [Result]?
+	let results: [Result]
 	
 	struct Result: Decodable {
-		let name: String?
-		let url: String?
+		let name: String
+		let url: String
 	}
 	
 }
