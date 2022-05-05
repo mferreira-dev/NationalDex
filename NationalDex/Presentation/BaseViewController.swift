@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol BaseProtocol {
+protocol BaseViewController {
 	func setupLayout()
 	func setupObservers()
 }

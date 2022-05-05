@@ -81,9 +81,19 @@ struct PokemonDetails: Decodable {
 	struct Sprites: Decodable {
 		let frontDefault: String
 		let other: Other
+		let versions: Versions
 		
 		struct Other: Decodable {
+			let home: Home
 			let officialArtwork: OfficialArtwork
+			
+			struct Home: Decodable {
+				var frontDefault: String? = String.empty()
+				
+				enum CodingKeys: String, CodingKey {
+					case frontDefault = "front_default"
+				}
+			}
 			
 			struct OfficialArtwork: Decodable {
 				let frontDefault: String
@@ -94,13 +104,35 @@ struct PokemonDetails: Decodable {
 			}
 			
 			enum CodingKeys: String, CodingKey {
+				case home = "home"
 				case officialArtwork = "official-artwork"
+			}
+		}
+		
+		struct Versions: Decodable {
+			let gen8: Gen8
+			
+			struct Gen8: Decodable {
+				let icons: Icons
+				
+				struct Icons: Decodable {
+					var frontDefault: String? = String.empty()
+					
+					enum CodingKeys: String, CodingKey {
+						case frontDefault = "front_default"
+					}
+				}
+			}
+			
+			enum CodingKeys: String, CodingKey {
+				case gen8 = "generation-viii"
 			}
 		}
 		
 		enum CodingKeys: String, CodingKey {
 			case frontDefault = "front_default"
 			case other = "other"
+			case versions = "versions"
 		}
 	}
 	

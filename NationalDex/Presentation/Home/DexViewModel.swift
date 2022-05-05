@@ -20,6 +20,10 @@ final class DexViewModel {
 	
 	var isPaginating = false
 	
+	init() {
+		fetchPokemonIndex()
+	}
+	
 	func fetchPokemonIndex() {
 		if offset > count {
 			return
