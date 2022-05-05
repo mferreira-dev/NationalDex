@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DexViewController: UIViewController, BaseProtocol {
 	
@@ -13,7 +14,8 @@ class DexViewController: UIViewController, BaseProtocol {
 	
 	private let pokemonTableView: UITableView = {
 		let table = UITableView()
-		table.register(UITableViewCell.self, forCellReuseIdentifier: K.Cells.pokemonCell)
+//		table.tableHeaderView = UIView()
+		table.register(DexPokemonCell.self, forCellReuseIdentifier: K.Cells.pokemonCell)
 		return table
 	}()
 	
@@ -58,7 +60,7 @@ extension DexViewController: UITableViewDelegate, UITableViewDataSource {
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		let position = scrollView.contentOffset.y
 		
-		if (position > pokemonTableView.contentSize.height - scrollView.frame.size.height - 1000) {
+		if (position > pokemonTableView.contentSize.height - scrollView.frame.size.height - 1500) {
 			if !viewModel.isPaginating {
 				viewModel.fetchPokemonIndex()
 			}
@@ -66,12 +68,18 @@ extension DexViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return viewModel.pokemonIndex.count
+		return viewModel.pokemonList.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.pokemonCell, for: indexPath)
-		cell.textLabel?.text = viewModel.pokemonList[indexPath.row].name.capitalized
+		let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.pokemonCell, for: indexPath) as! DexPokemonCell
+		
+		let name = viewModel.pokemonList[indexPath.row].name.capitalized
+		let imageUrl = viewModel.pokemonList[indexPath.row].sprites.other.home.frontDefault
+		
+		cell.nameLabel.text = name
+		cell.iconImageView.kf.setImage(with: URL(string: imageUrl))
+		
 		return cell
 	}
 	

@@ -24,6 +24,7 @@
 		5B430B13282310AE00AD0D05 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B12282310AE00AD0D05 /* Endpoints.swift */; };
 		5B430B152823123D00AD0D05 /* PokemonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B142823123D00AD0D05 /* PokemonUseCase.swift */; };
 		5B62A81E2823513500DB9E7B /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62A81D2823513500DB9E7B /* PokemonDetails.swift */; };
+		5B8D3817282379C5004D6B7C /* DexPokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D3816282379C5004D6B7C /* DexPokemonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		5B430B12282310AE00AD0D05 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		5B430B142823123D00AD0D05 /* PokemonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonUseCase.swift; sourceTree = "<group>"; };
 		5B62A81D2823513500DB9E7B /* PokemonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
+		5B8D3816282379C5004D6B7C /* DexPokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexPokemonCell.swift; sourceTree = "<group>"; };
 		BF1865F34F907A70F141EC65 /* Pods-NationalDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDex.release.xcconfig"; path = "Target Support Files/Pods-NationalDex/Pods-NationalDex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 			children = (
 				5B430AD92822F28E00AD0D05 /* DexViewController.swift */,
 				5B430AF92822F75B00AD0D05 /* DexViewModel.swift */,
+				5B8D3816282379C5004D6B7C /* DexPokemonCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				5B430B13282310AE00AD0D05 /* Endpoints.swift in Sources */,
 				5B430AF82822F71300AD0D05 /* K.swift in Sources */,
 				5B430ADA2822F28E00AD0D05 /* DexViewController.swift in Sources */,
+				5B8D3817282379C5004D6B7C /* DexPokemonCell.swift in Sources */,
 				5B430AD62822F28E00AD0D05 /* AppDelegate.swift in Sources */,
 				5B430B0B28230D7600AD0D05 /* PokemonIndex.swift in Sources */,
 				5B430B152823123D00AD0D05 /* PokemonUseCase.swift in Sources */,

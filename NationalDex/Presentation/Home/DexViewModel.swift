@@ -14,10 +14,11 @@ final class DexViewModel {
 	var pokemonListObservable: Observable<[PokemonDetails]> = Observable(nil)
 	var pokemonList = [PokemonDetails]()
 	
-	var pokemonIndex = [PokemonIndex.Result]()
-	var isPaginating = false
+	private let group = DispatchGroup()
 	private var offset = 0
 	private var count = 0
+	
+	var isPaginating = false
 	
 	func fetchPokemonIndex() {
 		if offset > count {
@@ -38,22 +39,18 @@ final class DexViewModel {
 				self.count = safeResponse.count
 			}
 			
-			safeResponse.results.forEach {
-				self.pokemonIndex.append($0)
+			safeResponse.results.forEach { it in
+				self.group.enter()
+				self.fetchPokemonDetailsByName(name: it.name)
 			}
 			
-			// TODO: Implement Async network calls.
-			self.getPokemonDetails()
-			self.pokemonIndex.removeAll()
+			self.group.notify(queue: .main) {
+				self.pokemonList = self.pokemonList.sorted(by: { $0.id < $1.id})
+				self.pokemonListObservable.value = self.pokemonList
+			}
 			
 			self.offset += K.pokemonPerPage
 			self.isPaginating = false
-		}
-	}
-	
-	func getPokemonDetails() {
-		pokemonIndex.forEach { it in
-			fetchPokemonDetailsByName(name: it.name)
 		}
 	}
 	
@@ -65,9 +62,9 @@ final class DexViewModel {
 			}
 			
 			guard let safeResponse = response else { return }
-			self.pokemonList.append(safeResponse)
 			
-			self.pokemonListObservable.value = self.pokemonList
+			self.pokemonList.append(safeResponse)
+			self.group.leave()
 		}
 	}
 	
