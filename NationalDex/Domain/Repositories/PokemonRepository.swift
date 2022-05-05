@@ -10,4 +10,5 @@ import Alamofire
 
 protocol PokemonRepository {
 	func fetchPokemonIndex(pokemonPerPage: Int, offset: Int, completion: @escaping (PokemonIndex?, AFError?) -> Void)
+	func fetchPokemonDetailsByName(name: String, completion: @escaping (PokemonDetails?, AFError?) -> Void)
 }

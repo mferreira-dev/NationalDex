@@ -28,4 +28,8 @@ struct NetworkClient {
 		perform(url, completion)
 	}
 	
+	func fetchPokemonDetailsByName(url: String, completion: @escaping (PokemonDetails?, AFError?) -> Void) {
+		perform(url, completion)
+	}
+	
 }

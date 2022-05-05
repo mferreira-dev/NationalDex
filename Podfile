@@ -7,5 +7,6 @@ target 'NationalDex' do
   # Pods for NationalDex
   pod 'IQKeyboardManagerSwift'
   pod 'Alamofire'
+  pod 'Kingfisher'
 
 end

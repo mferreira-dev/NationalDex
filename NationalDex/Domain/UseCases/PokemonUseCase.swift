@@ -20,4 +20,8 @@ final class PokemonUseCase {
 		pokemonRepository.fetchPokemonIndex(pokemonPerPage: pokemonPerPage, offset: offset, completion: completion)
 	}
 	
+	func fetchPokemonDetailsByName(name: String, completion: @escaping (PokemonDetails?, AFError?) -> Void) {
+		pokemonRepository.fetchPokemonDetailsByName(name: name, completion: completion)
+	}
+	
 }

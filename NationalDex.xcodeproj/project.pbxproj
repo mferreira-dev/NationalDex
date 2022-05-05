@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1804B2FFD8D74ABBA71D188D /* Pods_NationalDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EC0DE203ADDF044C73A03A /* Pods_NationalDex.framework */; };
+		5B349B842824067700A7438B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B349B832824067700A7438B /* Extensions.swift */; };
 		5B430AD62822F28E00AD0D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AD52822F28E00AD0D05 /* AppDelegate.swift */; };
 		5B430AD82822F28E00AD0D05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AD72822F28E00AD0D05 /* SceneDelegate.swift */; };
 		5B430ADA2822F28E00AD0D05 /* DexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AD92822F28E00AD0D05 /* DexViewController.swift */; };
@@ -15,19 +16,21 @@
 		5B430AF62822F6E900AD0D05 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AF52822F6E900AD0D05 /* Observable.swift */; };
 		5B430AF82822F71300AD0D05 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AF72822F71300AD0D05 /* K.swift */; };
 		5B430AFA2822F75B00AD0D05 /* DexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AF92822F75B00AD0D05 /* DexViewModel.swift */; };
-		5B430B002822FBA000AD0D05 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430AFF2822FBA000AD0D05 /* BaseViewController.swift */; };
-		5B430B082823050700AD0D05 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B072823050600AD0D05 /* BaseProtocol.swift */; };
+		5B430B082823050700AD0D05 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B072823050600AD0D05 /* BaseViewController.swift */; };
 		5B430B0B28230D7600AD0D05 /* PokemonIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B0A28230D7600AD0D05 /* PokemonIndex.swift */; };
 		5B430B0D28230E6F00AD0D05 /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B0C28230E6F00AD0D05 /* PokemonRepository.swift */; };
 		5B430B0F28230F3D00AD0D05 /* PokemonRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B0E28230F3D00AD0D05 /* PokemonRepositoryImpl.swift */; };
 		5B430B1128230F8D00AD0D05 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B1028230F8D00AD0D05 /* NetworkClient.swift */; };
 		5B430B13282310AE00AD0D05 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B12282310AE00AD0D05 /* Endpoints.swift */; };
 		5B430B152823123D00AD0D05 /* PokemonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B430B142823123D00AD0D05 /* PokemonUseCase.swift */; };
+		5B62A81E2823513500DB9E7B /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62A81D2823513500DB9E7B /* PokemonDetails.swift */; };
+		5B8D3817282379C5004D6B7C /* DexPokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D3816282379C5004D6B7C /* DexPokemonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03EC0DE203ADDF044C73A03A /* Pods_NationalDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NationalDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C47DA480228186E32F825CF /* Pods-NationalDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDex.debug.xcconfig"; path = "Target Support Files/Pods-NationalDex/Pods-NationalDex.debug.xcconfig"; sourceTree = "<group>"; };
+		5B349B832824067700A7438B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5B430AD22822F28E00AD0D05 /* NationalDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NationalDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B430AD52822F28E00AD0D05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B430AD72822F28E00AD0D05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,14 +40,15 @@
 		5B430AF52822F6E900AD0D05 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		5B430AF72822F71300AD0D05 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		5B430AF92822F75B00AD0D05 /* DexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexViewModel.swift; sourceTree = "<group>"; };
-		5B430AFF2822FBA000AD0D05 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		5B430B072823050600AD0D05 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
+		5B430B072823050600AD0D05 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5B430B0A28230D7600AD0D05 /* PokemonIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonIndex.swift; sourceTree = "<group>"; };
 		5B430B0C28230E6F00AD0D05 /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
 		5B430B0E28230F3D00AD0D05 /* PokemonRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepositoryImpl.swift; sourceTree = "<group>"; };
 		5B430B1028230F8D00AD0D05 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		5B430B12282310AE00AD0D05 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		5B430B142823123D00AD0D05 /* PokemonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonUseCase.swift; sourceTree = "<group>"; };
+		5B62A81D2823513500DB9E7B /* PokemonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
+		5B8D3816282379C5004D6B7C /* DexPokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexPokemonCell.swift; sourceTree = "<group>"; };
 		BF1865F34F907A70F141EC65 /* Pods-NationalDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NationalDex.release.xcconfig"; path = "Target Support Files/Pods-NationalDex/Pods-NationalDex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +117,7 @@
 		5B430AEA2822F50500AD0D05 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5B430B092823063900AD0D05 /* Base */,
+				5B430B072823050600AD0D05 /* BaseViewController.swift */,
 				5B430AEE2822F55F00AD0D05 /* Home */,
 			);
 			path = Presentation;
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				5B430AF52822F6E900AD0D05 /* Observable.swift */,
+				5B349B832824067700A7438B /* Extensions.swift */,
 				5B430AF72822F71300AD0D05 /* K.swift */,
 			);
 			path = Utils;
@@ -153,6 +158,7 @@
 			children = (
 				5B430AD92822F28E00AD0D05 /* DexViewController.swift */,
 				5B430AF92822F75B00AD0D05 /* DexViewModel.swift */,
+				5B8D3816282379C5004D6B7C /* DexPokemonCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -177,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				5B430B0A28230D7600AD0D05 /* PokemonIndex.swift */,
+				5B62A81D2823513500DB9E7B /* PokemonDetails.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -187,15 +194,6 @@
 				5B430B0E28230F3D00AD0D05 /* PokemonRepositoryImpl.swift */,
 			);
 			path = Repositories;
-			sourceTree = "<group>";
-		};
-		5B430B092823063900AD0D05 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				5B430B072823050600AD0D05 /* BaseProtocol.swift */,
-				5B430AFF2822FBA000AD0D05 /* BaseViewController.swift */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,15 +314,17 @@
 				5B430B13282310AE00AD0D05 /* Endpoints.swift in Sources */,
 				5B430AF82822F71300AD0D05 /* K.swift in Sources */,
 				5B430ADA2822F28E00AD0D05 /* DexViewController.swift in Sources */,
+				5B8D3817282379C5004D6B7C /* DexPokemonCell.swift in Sources */,
 				5B430AD62822F28E00AD0D05 /* AppDelegate.swift in Sources */,
 				5B430B0B28230D7600AD0D05 /* PokemonIndex.swift in Sources */,
 				5B430B152823123D00AD0D05 /* PokemonUseCase.swift in Sources */,
 				5B430B0D28230E6F00AD0D05 /* PokemonRepository.swift in Sources */,
-				5B430B002822FBA000AD0D05 /* BaseViewController.swift in Sources */,
-				5B430B082823050700AD0D05 /* BaseProtocol.swift in Sources */,
+				5B430B082823050700AD0D05 /* BaseViewController.swift in Sources */,
 				5B430AD82822F28E00AD0D05 /* SceneDelegate.swift in Sources */,
 				5B430B0F28230F3D00AD0D05 /* PokemonRepositoryImpl.swift in Sources */,
+				5B349B842824067700A7438B /* Extensions.swift in Sources */,
 				5B430B1128230F8D00AD0D05 /* NetworkClient.swift in Sources */,
+				5B62A81E2823513500DB9E7B /* PokemonDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +458,7 @@
 				INFOPLIST_FILE = NationalDex/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,6 +487,7 @@
 				INFOPLIST_FILE = NationalDex/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
